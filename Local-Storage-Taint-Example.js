@@ -21,3 +21,10 @@ function updateClickCount() {
 }
 
 initClickCount();
+
+
+
+// So what we want is to track information flow from source to sink. We have to define the source and sink in our analysis 
+// and then track the information flow from source to sink that either there is any taint or vulnerability attached with 
+// information that comes from source to sink. In above example, we have 'window.locaStorage.setItem' as source and  'window.locaStorage.getItem'
+// as a sink.
