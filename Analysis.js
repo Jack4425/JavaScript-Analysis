@@ -84,17 +84,17 @@
             return {result: result};
         };
  
-        this.literal = function (iid, val, hasGetterSetter) {
-            return {result: val};
-        };
+       // this.literal = function (iid, val, hasGetterSetter) {
+         //   return {result: val};
+        //};
  
-        this.forinObject = function (iid, val) {
-            return {result: val};
-        };
+       // this.forinObject = function (iid, val) {
+      //      return {result: val};
+      //  };
  
-        this.declare = function (iid, name, val, isArgument, argumentIndex, isCatchParam) {
-            return {result: val};
-        };
+     //   this.declare = function (iid, name, val, isArgument, argumentIndex, isCatchParam) {
+     //       return {result: val};
+     //   };
  
         this.getFieldPre = function (iid, base, offset, isComputed, isOpAssign, isMethodCall) {
             let toTaint = Shadow.isShadowed(base) || Shadow.isShadowed(offset);
@@ -125,43 +125,43 @@
             return {base: base, offset: offset, val: val, skip: false};
         };
  
-        this.putField = function (iid, base, offset, val, isComputed, isOpAssign) {
-            return {result: val};
-        };
+    //    this.putField = function (iid, base, offset, val, isComputed, isOpAssign) {
+   //         return {result: val};
+   //     };
  
-        this.read = function (iid, name, val, isGlobal, isScriptLocal) {
-            return {result: val};
-        };
+   //     this.read = function (iid, name, val, isGlobal, isScriptLocal) {
+    //        return {result: val};
+    //    };
  
-        this.write = function (iid, name, val, lhs, isGlobal, isScriptLocal) {
-            return {result: val};
-        };
+    //    this.write = function (iid, name, val, lhs, isGlobal, isScriptLocal) {
+      //      return {result: val};
+     //   };
  
-        this._return = function (iid, val) {
-            return {result: val};
-        };
+       // this._return = function (iid, val) {
+       //     return {result: val};
+      ///  };
  
-        this._throw = function (iid, val) {
-            return {result: val};
-        };
+      //  this._throw = function (iid, val) {
+      //      return {result: val};
+     //   };
  
-        this._with = function (iid, val) {
-            return {result: val};
-        };
+     //   this._with = function (iid, val) {
+      //      return {result: val};
+     //   };
  
-        this.functionEnter = function (iid, f, dis, args) {
-        };
+      //  this.functionEnter = function (iid, f, dis, args) {
+      //  };
  
-        this.functionExit = function (iid, returnVal, wrappedExceptionVal) {
-            return {returnVal: returnVal, wrappedExceptionVal: wrappedExceptionVal, isBacktrack: false};
-        };
+       // this.functionExit = function (iid, returnVal, wrappedExceptionVal) {
+      //      return {returnVal: returnVal, wrappedExceptionVal: wrappedExceptionVal, isBacktrack: false};
+      //  };
  
-        this.scriptEnter = function (iid, instrumentedFileName, originalFileName) {
-        };
+      //  this.scriptEnter = function (iid, instrumentedFileName, originalFileName) {
+      //  };
  
-        this.scriptExit = function (iid, wrappedExceptionVal) {
-            return {wrappedExceptionVal: wrappedExceptionVal, isBacktrack: false};
-        };
+     //   this.scriptExit = function (iid, wrappedExceptionVal) {
+     //       return {wrappedExceptionVal: wrappedExceptionVal, isBacktrack: false};
+     //   };
  
         this.binaryPre = function (iid, op, left, right, isOpAssign, isSwitchCaseComparison, isComputed) {
             
@@ -201,15 +201,15 @@
             return {result: result};
         };
  
-        this.instrumentCodePre = function (iid, code, isDirect) {
-            return {code: code, skip: false};
-        };
+      //  this.instrumentCodePre = function (iid, code, isDirect) {
+      //      return {code: code, skip: false};
+      //  };
  
-        this.instrumentCode = function (iid, newCode, newAst, isDirect) {
-            return {result: newCode};
-        };
+     //   this.instrumentCode = function (iid, newCode, newAst, isDirect) {
+      //      return {result: newCode};
+      //  };
  
-        this.endExpression = function (iid) {
+     //   this.endExpression = function (iid) {
         };
  
         this.endExecution = function () {
@@ -219,9 +219,9 @@
             return false;
         };
  
-        this.onReady = function (cb) {
-            cb();
-        };
+       // this.onReady = function (cb) {
+       //     cb();
+      //  };
     }
  
     sandbox.analysis = new Taint();
